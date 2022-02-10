@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<h2>Listado de empleados</h2>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let empleado of empleados" (click)="mostrarNombre(empleado.nombre)">
+        <span>{{empleado.idEmpleado}}</span> {{empleado.nombre}}
+    </li>
+</ul><br><br>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let empleado of empleados" [class.selected]="empleado === selectedEmpleado" (click)="onSelect(empleado)">
+        <span>{{empleado.idEmpleado}}</span> {{empleado.nombre}}
+    </li>
+</ul>
+<app-info-empleados [empleado]="selectedEmpleado"></app-info-empleados>
