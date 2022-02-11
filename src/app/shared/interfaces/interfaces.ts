@@ -5,7 +5,7 @@ export interface Empleado {
     telefono: string,
     sueldobase: number,
     comisionventa: number,
-    numeroventas: number
+    numeroVentas: number
 }
 export interface Ubicacion {
     municipio: string;

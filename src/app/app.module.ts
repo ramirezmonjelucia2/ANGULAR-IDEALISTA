@@ -12,6 +12,7 @@ import { AboutMeComponent } from './views/about-me/about-me.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { ViviendasComponent } from './views/viviendas/viviendas.component';
 import { InfoViviendasComponent } from './views/info-viviendas/info-viviendas.component';
+import { LoginComponent } from './views/login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { InfoViviendasComponent } from './views/info-viviendas/info-viviendas.co
     AboutMeComponent,
     DashboardComponent,
     ViviendasComponent,
-    InfoViviendasComponent
+    InfoViviendasComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

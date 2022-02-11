@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { AboutMeComponent } from './views/about-me/about-me.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { EmpleadosComponent } from './views/empleados/empleados.component';
+import { LoginComponent } from './views/login/login.component';
 import { ViviendasComponent } from './views/viviendas/viviendas.component';
 const routes = [
     { path: 'listado', component: ViviendasComponent },
@@ -11,6 +12,7 @@ const routes = [
     //{ path: 'empleados', component: EmpleadosComponent },
     { path: 'empleadoslist', component: EmpleadosComponent },
     { path: 'dashboard', component: DashboardComponent },
+    { path: 'login', component: LoginComponent },
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 ];
 let AppRoutingModule = class AppRoutingModule {
