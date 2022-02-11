@@ -10,6 +10,8 @@ import { EmpleadosComponent } from './views/empleados/empleados.component';
 import { InfoEmpleadosComponent } from './views/info-empleados/info-empleados.component';
 import { AboutMeComponent } from './views/about-me/about-me.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { ViviendasComponent } from './views/viviendas/viviendas.component';
+import { InfoViviendasComponent } from './views/info-viviendas/info-viviendas.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
     EmpleadosComponent,
     InfoEmpleadosComponent,
     AboutMeComponent,
-    DashboardComponent
+    DashboardComponent,
+    ViviendasComponent,
+    InfoViviendasComponent
   ],
   imports: [
     BrowserModule,

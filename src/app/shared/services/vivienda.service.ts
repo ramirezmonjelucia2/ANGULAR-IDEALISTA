@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
-import { Empleado } from '../interfaces/interfaces';
+import { Empleado, Vivienda } from '../interfaces/interfaces';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EmpleadoService {
+export class ViviendaService {
 
   constructor(
     private httpClient: HttpClient
   ) { }
 
 
-  getEmpleados(): Observable<Empleado[]> {
-    return this.httpClient.get<Empleado[]>("https://idealistav21.herokuapp.com/empleados");
+  getViviendas(): Observable<Vivienda[]> {
+    return this.httpClient.get<Vivienda[]>("https://idealistav21.herokuapp.com/viviendas");
   }
 
 
