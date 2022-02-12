@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EmpleadoService {
-  private url = "https://idealista-api.herokuapp.com/"
+  private url = "https://idealista-api.herokuapp.com"
 
   constructor(private httpClient: HttpClient) {
   }
