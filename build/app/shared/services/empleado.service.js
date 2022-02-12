@@ -16,7 +16,7 @@ var http_1 = require("@angular/common/http");
 var EmpleadoService = /** @class */ (function () {
     function EmpleadoService(httpClient) {
         this.httpClient = httpClient;
-        this.url = "http://localhost:3000";
+        this.url = "https://idealistav21.herokuapp.com/";
     }
     EmpleadoService.prototype.getEmpleados = function () {
         var url = this.url + "/empleados";
