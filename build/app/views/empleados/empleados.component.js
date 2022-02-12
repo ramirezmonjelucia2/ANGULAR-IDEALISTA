@@ -21,10 +21,12 @@ var EmpleadosComponent = /** @class */ (function () {
     };
     EmpleadosComponent.prototype.getEmpleados = function () {
         var _this = this;
-        this.empleadoService.getEmpleados().subscribe(function (empleados) { return _this.empleados = empleados; });
+        this.empleadoService.getEmpleados().subscribe(function (empleados) { _this.empleados = empleados; });
     };
     EmpleadosComponent.prototype.eliminarEmpleado = function (id) {
-        this.empleadoService.eliminarEmpleado(id).subscribe(function () { console.log('asdasd'); });
+        this.empleadoService.eliminarEmpleado(id).subscribe(function () {
+            console.log('Eliminado');
+        });
     };
     EmpleadosComponent = __decorate([
         (0, core_1.Component)({

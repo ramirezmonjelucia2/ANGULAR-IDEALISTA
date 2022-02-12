@@ -9,11 +9,12 @@ import { EmpleadosComponent } from './views/empleados/empleados.component';
 import { ViviendasComponent } from './views/viviendas/viviendas.component';
 
 const routes: Routes = [
- { path: 'listado', component:ViviendasComponent },
+  { path: 'listado', component: ViviendasComponent },
   { path: 'aboutME', component: AboutMeComponent },
-  { path: 'empleados', component: EmpleadosComponent},
-  { path: 'dashboard', component: DashboardComponent},
-  { path: 'crear-empleado', component: CrearEmpleadoComponent},
+  { path: 'empleados', component: EmpleadosComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'crear-empleado', component: CrearEmpleadoComponent },
+  { path: 'editar-empleado', component: CrearEmpleadoComponent },
 
 
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -23,4 +24,4 @@ const routes: Routes = [
   exports: [RouterModule],
   imports: [RouterModule.forRoot(routes)],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

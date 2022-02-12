@@ -12,12 +12,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CrearEmpleadoComponent = void 0;
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
+var router_1 = require("@angular/router");
 var empleado_service_1 = require("src/app/shared/services/empleado.service");
 var CrearEmpleadoComponent = /** @class */ (function () {
-    function CrearEmpleadoComponent(fb, empleadoService) {
+    function CrearEmpleadoComponent(fb, empleadoService, activeRoute) {
         this.fb = fb;
         this.empleadoService = empleadoService;
+        this.activeRoute = activeRoute;
         this.submitted = false;
+        this.titulo = 'CREAR EMPLEADO';
         this.crearEmpleado = this.fb.group({
             idEmpleado: ['', forms_1.Validators.required],
             nombre: ['', forms_1.Validators.required],
@@ -26,6 +29,7 @@ var CrearEmpleadoComponent = /** @class */ (function () {
             sueldobase: ['', forms_1.Validators.required],
             comisionventa: ['', forms_1.Validators.required]
         });
+        this.id = this.activeRoute.snapshot.paramMap.get("idEmpleado");
     }
     CrearEmpleadoComponent.prototype.ngOnInit = function () {
     };
@@ -55,7 +59,8 @@ var CrearEmpleadoComponent = /** @class */ (function () {
             styleUrls: ['./crear-empleado.component.css']
         }),
         __metadata("design:paramtypes", [forms_1.FormBuilder,
-            empleado_service_1.EmpleadoService])
+            empleado_service_1.EmpleadoService,
+            router_1.ActivatedRoute])
     ], CrearEmpleadoComponent);
     return CrearEmpleadoComponent;
 }());

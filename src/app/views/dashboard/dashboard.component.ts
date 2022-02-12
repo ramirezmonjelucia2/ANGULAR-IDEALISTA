@@ -17,6 +17,6 @@ export class DashboardComponent implements OnInit {
 
   getEmpleados(): void {
     this.empleadoService.getEmpleados()
-      .subscribe(empleados => this.empleados = empleados.slice(0, 3));
+      .subscribe(empleados => this.empleados = empleados);
   }
 }

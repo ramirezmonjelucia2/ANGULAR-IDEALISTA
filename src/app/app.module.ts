@@ -11,6 +11,7 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { ViviendasComponent } from './views/viviendas/viviendas.component';
 import { InfoViviendasComponent } from './views/info-viviendas/info-viviendas.component';
 import { CrearEmpleadoComponent } from './views/crear-empleado/crear-empleado.component';
+import { EditarEmpleadoComponent } from './views/editar-empleado/editar-empleado.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CrearEmpleadoComponent } from './views/crear-empleado/crear-empleado.co
     ViviendasComponent,
     InfoViviendasComponent,
     CrearEmpleadoComponent,
+    EditarEmpleadoComponent,
   ],
   imports: [
     BrowserModule,

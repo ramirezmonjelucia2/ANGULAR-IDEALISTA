@@ -29,6 +29,17 @@ export class EmpleadoService {
     const url = `${this.url}/deleteEmpleado/${id}`;
     return this.httpClient.delete(url)
   }
+
+
+  getEmpleado(id: number): Observable<any> {
+    const url = `${this.url}/empleado/${id}`;
+    return this.httpClient.get(url);
+  }
+
+  modificarEmpleado(idEmpleado:number , empleado: any) {
+    const url = `${this.url}/empleado/${idEmpleado}`
+    return this.httpClient.put(url, empleado)
+  }
 }
 
 

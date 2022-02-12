@@ -19,6 +19,7 @@ var dashboard_component_1 = require("./views/dashboard/dashboard.component");
 var viviendas_component_1 = require("./views/viviendas/viviendas.component");
 var info_viviendas_component_1 = require("./views/info-viviendas/info-viviendas.component");
 var crear_empleado_component_1 = require("./views/crear-empleado/crear-empleado.component");
+var editar_empleado_component_1 = require("./views/editar-empleado/editar-empleado.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -32,6 +33,7 @@ var AppModule = /** @class */ (function () {
                 viviendas_component_1.ViviendasComponent,
                 info_viviendas_component_1.InfoViviendasComponent,
                 crear_empleado_component_1.CrearEmpleadoComponent,
+                editar_empleado_component_1.EditarEmpleadoComponent,
             ],
             imports: [
                 platform_browser_1.BrowserModule,

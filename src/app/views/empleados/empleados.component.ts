@@ -9,7 +9,7 @@ import { Empleado } from 'src/app/shared/classes/empleado';
   providers: [EmpleadoService]
 })
 export class EmpleadosComponent implements OnInit {
-  empleados!: Empleado[];
+  empleados: Empleado[];
 
   constructor(public empleadoService: EmpleadoService) { }
 
@@ -17,14 +17,14 @@ export class EmpleadosComponent implements OnInit {
     this.getEmpleados();
   }
 
-  public getEmpleados(){
-    this.empleadoService.getEmpleados().subscribe(empleados => this.empleados = empleados)
+  public getEmpleados() {
+    this.empleadoService.getEmpleados().subscribe(empleados => { this.empleados = empleados })
   }
 
- 
-
   eliminarEmpleado(id: number) {
-    this.empleadoService.eliminarEmpleado(id).subscribe(() => { console.log('asdasd') })
+    this.empleadoService.eliminarEmpleado(id).subscribe(() => {
+      console.log('Eliminado')
+    })
   }
 
 }

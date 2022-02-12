@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { EmpleadoService } from 'src/app/shared/services/empleado.service';
 
 @Component({
@@ -10,9 +11,12 @@ import { EmpleadoService } from 'src/app/shared/services/empleado.service';
 export class CrearEmpleadoComponent implements OnInit {
   crearEmpleado: FormGroup;
   submitted = false;
-
-  constructor(private fb: FormBuilder,
-    private empleadoService: EmpleadoService) {
+  id: string | null
+  titulo = 'CREAR EMPLEADO'
+  constructor(
+    private fb: FormBuilder,
+    private empleadoService: EmpleadoService,
+    private activeRoute: ActivatedRoute) {
     this.crearEmpleado = this.fb.group({
       idEmpleado: ['', Validators.required],
       nombre: ['', Validators.required],
@@ -21,9 +25,12 @@ export class CrearEmpleadoComponent implements OnInit {
       sueldobase: ['', Validators.required],
       comisionventa: ['', Validators.required]
     })
+    this.id = this.activeRoute.snapshot.paramMap.get("idEmpleado")
   }
 
+
   ngOnInit(): void {
+   
   }
 
 
@@ -51,4 +58,7 @@ export class CrearEmpleadoComponent implements OnInit {
 
     }
   }
+
+  
+ 
 }

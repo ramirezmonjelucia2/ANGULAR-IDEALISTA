@@ -3,7 +3,7 @@
         <div class="col-lg-6 offset-lg-3">
             <div class="card text-center">
                 <div class="card-body">
-                    <h3>CREAR EMPLEADO</h3>
+                    <h3>{{titulo}}</h3>
                     <span *ngIf="submitted && crearEmpleado.invalid" class="badge badge-danger">Pro favor, ingrese todos los campos</span>
                     <form [formGroup]="crearEmpleado" (ngSubmit)="agregarEmpleado()">
                         <div class="row">
@@ -29,7 +29,7 @@
                                     class="form-control form-control-lg mt-3" placeholder="Comision Venta"></div>
                         </div>
                         <div class="mt-3">
-
+                           
                             <button type="submit" class="btn btn-dark btn-lg">Agregar</button>
                         </div>
 

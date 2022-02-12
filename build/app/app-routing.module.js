@@ -20,6 +20,7 @@ var routes = [
     { path: 'empleados', component: empleados_component_1.EmpleadosComponent },
     { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
     { path: 'crear-empleado', component: crear_empleado_component_1.CrearEmpleadoComponent },
+    { path: 'editar-empleado', component: crear_empleado_component_1.CrearEmpleadoComponent },
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 ];
 var AppRoutingModule = /** @class */ (function () {

@@ -25,7 +25,7 @@ var DashboardComponent = /** @class */ (function () {
     DashboardComponent.prototype.getEmpleados = function () {
         var _this = this;
         this.empleadoService.getEmpleados()
-            .subscribe(function (empleados) { return _this.empleados = empleados.slice(0, 3); });
+            .subscribe(function (empleados) { return _this.empleados = empleados; });
     };
     DashboardComponent = __decorate([
         (0, core_1.Component)({

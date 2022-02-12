@@ -19,7 +19,8 @@ var EmpleadoService = /** @class */ (function () {
         this.url = "http://localhost:3000";
     }
     EmpleadoService.prototype.getEmpleados = function () {
-        return this.httpClient.get(this.url + "/empleados");
+        var url = this.url + "/empleados";
+        return this.httpClient.get(url);
     };
     EmpleadoService.prototype.agregarEmpleado = function (empleado) {
         var url = this.url + "/empleados";
@@ -28,6 +29,14 @@ var EmpleadoService = /** @class */ (function () {
     EmpleadoService.prototype.eliminarEmpleado = function (id) {
         var url = this.url + "/deleteEmpleado/" + id;
         return this.httpClient.delete(url);
+    };
+    EmpleadoService.prototype.getEmpleado = function (id) {
+        var url = this.url + "/empleado/" + id;
+        return this.httpClient.get(url);
+    };
+    EmpleadoService.prototype.modificarEmpleado = function (idEmpleado, empleado) {
+        var url = this.url + "/empleado/" + idEmpleado;
+        return this.httpClient.put(url, empleado);
     };
     EmpleadoService = __decorate([
         (0, core_1.Injectable)({
