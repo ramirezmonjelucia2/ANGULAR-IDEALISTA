@@ -14,8 +14,9 @@ export class EmpleadoService {
 
 
 
-  getEmpleados(): Observable<Empleado[]> {
-    return this.httpClient.get<Empleado[]>(this.url + "/empleados");
+  getEmpleados(): Observable<any> {
+    const url = `${this.url}/empleados`;
+    return this.httpClient.get(url);
   }
 
 
