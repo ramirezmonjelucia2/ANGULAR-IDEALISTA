@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { EmpleadoService } from 'src/app/shared/services/empleado.service';
-import { NgForm } from '@angular/forms';
 import { Empleado } from 'src/app/shared/classes/empleado';
 @Component({
   selector: 'app-empleados',
@@ -10,7 +9,8 @@ import { Empleado } from 'src/app/shared/classes/empleado';
 })
 export class EmpleadosComponent implements OnInit {
   empleados: Empleado[];
-
+ 
+  OEmpleado: Empleado
   constructor(public empleadoService: EmpleadoService) { }
 
   ngOnInit() {

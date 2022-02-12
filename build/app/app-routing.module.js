@@ -12,6 +12,7 @@ var router_1 = require("@angular/router");
 var about_me_component_1 = require("./views/about-me/about-me.component");
 var crear_empleado_component_1 = require("./views/crear-empleado/crear-empleado.component");
 var dashboard_component_1 = require("./views/dashboard/dashboard.component");
+var editar_empleado_component_1 = require("./views/editar-empleado/editar-empleado.component");
 var empleados_component_1 = require("./views/empleados/empleados.component");
 var viviendas_component_1 = require("./views/viviendas/viviendas.component");
 var routes = [
@@ -20,7 +21,7 @@ var routes = [
     { path: 'empleados', component: empleados_component_1.EmpleadosComponent },
     { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
     { path: 'crear-empleado', component: crear_empleado_component_1.CrearEmpleadoComponent },
-    { path: 'editar-empleado', component: crear_empleado_component_1.CrearEmpleadoComponent },
+    { path: 'editar-empleado/:idEmpleado', component: editar_empleado_component_1.EditarEmpleadoComponent },
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 ];
 var AppRoutingModule = /** @class */ (function () {

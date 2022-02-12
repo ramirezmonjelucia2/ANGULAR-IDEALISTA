@@ -12,6 +12,7 @@
             <th>Telefono</th>
             <th>Sueldo Base</th>
             <th>Comision Venta</th>
+            <th>Sueldo Total</th>
             <th></th>
           </tr>
         </thead>
@@ -23,8 +24,9 @@
             <td>{{ empleado.telefono }}</td>
             <td>{{ empleado.sueldobase | currency }}</td>
             <td>{{ empleado.comisionventa | currency }}</td>
+            <td>{{ empleado.salario }}</td>
             <td>
-              <i class="fas fa-edit fa-lg text-info mr-2" routerLink="/editar-empleado"></i>
+              <i class="fas fa-edit fa-lg text-info mr-2" [routerLink]="['/editar-empleado/', empleado.idEmpleado]"></i>
               <i (click)="eliminarEmpleado(empleado.idEmpleado)" class="fas fa-trash-alt fa-lg text-danger"></i>
             </td>
           </tr>

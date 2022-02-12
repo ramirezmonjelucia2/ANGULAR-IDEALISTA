@@ -11,9 +11,8 @@ var Empleado = /** @class */ (function () {
         this.comisionventa = comisionventa;
         this.numeroVentas = numeroVentas;
     }
-    Empleado.prototype.sueldo = function () {
-        var sueldo = this.sueldobase + this.numeroVentas * this.comisionventa;
-        return sueldo;
+    Empleado.prototype.salario = function () {
+        return Math.round(this.sueldobase + (this.numeroVentas * this.comisionventa));
     };
     return Empleado;
 }());

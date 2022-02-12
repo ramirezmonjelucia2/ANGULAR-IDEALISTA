@@ -49,7 +49,7 @@ export class CrearEmpleadoComponent implements OnInit {
     }
     this.empleadoService.agregarEmpleado(empleado).subscribe(
       () => {
-        console.log("dasfasdasd")
+        console.log("Usuario guardado")
       }
 
     ), (error) => {

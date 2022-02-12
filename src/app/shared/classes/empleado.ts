@@ -7,13 +7,13 @@ export class Empleado {
   comisionventa: number;
   numeroVentas: number
   constructor(
-    idEmpleado: 0,
-    nombre: '',
-    email: '',
-    telefono: '',
-    sueldobase: 950,
-    comisionventa: 100,
-    numeroVentas: 0
+    idEmpleado: number,
+    nombre: string,
+    email: string,
+    telefono: string,
+    sueldobase: number,
+    comisionventa: number,
+    numeroVentas: number
 
   ) {
     this.idEmpleado = idEmpleado;
@@ -26,8 +26,7 @@ export class Empleado {
   }
 
 
-  sueldo() {
-    let sueldo = this.sueldobase + this.numeroVentas * this.comisionventa;
-    return sueldo;
+  public salario() {
+    return Math.round(this.sueldobase + (this.numeroVentas * this.comisionventa))
   }
 }

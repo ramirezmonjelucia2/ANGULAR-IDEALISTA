@@ -47,7 +47,7 @@ var CrearEmpleadoComponent = /** @class */ (function () {
             comisionventa: this.crearEmpleado.value.comisionventa
         };
         this.empleadoService.agregarEmpleado(empleado).subscribe(function () {
-            console.log("dasfasdasd");
+            console.log("Usuario guardado");
         }), function (error) {
             console.log(error);
         };
