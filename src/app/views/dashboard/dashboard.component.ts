@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Empleado } from 'src/app/shared/interfaces/interfaces';
+import { Empleado } from 'src/app/shared/classes/empleado';
 import { EmpleadoService } from 'src/app/shared/services/empleado.service';
 @Component({
   selector: 'app-dashboard',

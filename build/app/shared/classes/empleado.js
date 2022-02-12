@@ -1,41 +1,21 @@
-export class Empleado {
-    constructor(id, nombre, sueldobase, comisionventa, ventas) {
-        this._id = id;
-        this._nombre = nombre;
-        this._sueldobase = sueldobase;
-        this._comisionventa = comisionventa;
-        this._ventas = ventas;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Empleado = void 0;
+var Empleado = /** @class */ (function () {
+    function Empleado(idEmpleado, nombre, email, telefono, sueldobase, comisionventa, numeroVentas) {
+        this.idEmpleado = idEmpleado;
+        this.nombre = nombre;
+        this.email = email;
+        this.telefono = telefono;
+        this.sueldobase = sueldobase;
+        this.comisionventa = comisionventa;
+        this.numeroVentas = numeroVentas;
     }
-    get id() {
-        return this._id;
-    }
-    get nombre() {
-        return this._nombre;
-    }
-    get sueldobase() {
-        return this._sueldobase;
-    }
-    get comisionventa() {
-        return this._comisionventa;
-    }
-    get ventas() {
-        return this._ventas;
-    }
-    set nombre(nombre) {
-        this._nombre = nombre;
-    }
-    set sueldobase(sueldo) {
-        this._sueldobase = sueldo;
-    }
-    set comisionventa(comisionventa) {
-        this._comisionventa = comisionventa;
-    }
-    set ventas(ventas) {
-        this._ventas = ventas;
-    }
-    sueldo() {
-        let sueldo = this._sueldobase + this.ventas.length * this._comisionventa;
+    Empleado.prototype.sueldo = function () {
+        var sueldo = this.sueldobase + this.numeroVentas * this.comisionventa;
         return sueldo;
-    }
-}
+    };
+    return Empleado;
+}());
+exports.Empleado = Empleado;
 //# sourceMappingURL=empleado.js.map

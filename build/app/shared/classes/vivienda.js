@@ -1,5 +1,8 @@
-export class Vivienda {
-    constructor(idVivienda, largo, ancho, ubicacion, caracteristicas, estado) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Vivienda = void 0;
+var Vivienda = /** @class */ (function () {
+    function Vivienda(idVivienda, largo, ancho, ubicacion, caracteristicas, estado) {
         this._idVivienda = idVivienda;
         this._largo = largo;
         this._ancho = ancho;
@@ -7,48 +10,72 @@ export class Vivienda {
         this._caracteristicas = caracteristicas;
         this._estado = estado;
     }
-    get idVivienda() {
-        return this._idVivienda;
-    }
-    get largo() {
-        return this._largo;
-    }
-    get ancho() {
-        return this._ancho;
-    }
-    get ubicacion() {
-        return this._ubicacion;
-    }
-    get caracteristicas() {
-        return this._caracteristicas;
-    }
-    get estado() {
-        return this._estado;
-    }
-    set largo(largo) {
-        this._largo = largo;
-    }
-    set ancho(ancho) {
-        this._ancho = ancho;
-    }
-    set ubicacion(ubicacion) {
-        this._ubicacion = ubicacion;
-    }
-    set caracteristicas(caracteristicas) {
-        this._caracteristicas = caracteristicas;
-    }
-    ubi() {
+    Object.defineProperty(Vivienda.prototype, "idVivienda", {
+        get: function () {
+            return this._idVivienda;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Vivienda.prototype, "largo", {
+        get: function () {
+            return this._largo;
+        },
+        set: function (largo) {
+            this._largo = largo;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Vivienda.prototype, "ancho", {
+        get: function () {
+            return this._ancho;
+        },
+        set: function (ancho) {
+            this._ancho = ancho;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Vivienda.prototype, "ubicacion", {
+        get: function () {
+            return this._ubicacion;
+        },
+        set: function (ubicacion) {
+            this._ubicacion = ubicacion;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Vivienda.prototype, "caracteristicas", {
+        get: function () {
+            return this._caracteristicas;
+        },
+        set: function (caracteristicas) {
+            this._caracteristicas = caracteristicas;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Vivienda.prototype, "estado", {
+        get: function () {
+            return this._estado;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Vivienda.prototype.ubi = function () {
         return ('Municipio: ' +
             this._ubicacion.municipio +
             ', Ciudad: ' +
             this._ubicacion.ciudad +
             ', Codigo postal: ' +
             this._ubicacion.codpost);
-    }
-    est() {
+    };
+    Vivienda.prototype.est = function () {
         return ('Vendido: ' + this._estado.vendido + ', Fecha: ' + this._estado.fecha);
-    }
-    carac() {
+    };
+    Vivienda.prototype.carac = function () {
         return ('\nHabitaciones: ' +
             this._caracteristicas.habitaciones +
             ', Baños: ' +
@@ -57,10 +84,10 @@ export class Vivienda {
             this._caracteristicas.ascensor +
             '\nEquipamiento: ' +
             this._caracteristicas.equipamiento);
-    }
+    };
     //Calcular el precio de la vivienda, según la ubicación el precio del m2 varía.
-    preciom2() {
-        let preciom2;
+    Vivienda.prototype.preciom2 = function () {
+        var preciom2;
         if (this.ubicacion.ciudad == 'sevilla') {
             preciom2 = 1386 * this.superficie();
         }
@@ -86,18 +113,16 @@ export class Vivienda {
             preciom2 = 1253 * this.superficie();
         }
         return Math.round(preciom2);
-    }
-    superficie() {
-        let superficie;
+    };
+    Vivienda.prototype.superficie = function () {
+        var superficie;
         superficie = this._ancho * this.largo;
         return superficie;
-    }
-    todo() {
-        return `Superficie: ${this.superficie()}, 
-      Precio: ${this.preciom2()}, 
-      Ubicación: [ ${this.ubi()} ], 
-      Caracteristicas: [ ${this.carac()} ], 
-      Estado: [ ${this.est()} ]`;
-    }
-}
+    };
+    Vivienda.prototype.todo = function () {
+        return "Superficie: " + this.superficie() + ", \n      Precio: " + this.preciom2() + ", \n      Ubicaci\u00F3n: [ " + this.ubi() + " ], \n      Caracteristicas: [ " + this.carac() + " ], \n      Estado: [ " + this.est() + " ]";
+    };
+    return Vivienda;
+}());
+exports.Vivienda = Vivienda;
 //# sourceMappingURL=vivienda.js.map

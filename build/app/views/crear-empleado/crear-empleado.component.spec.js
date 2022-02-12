@@ -37,15 +37,15 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var testing_1 = require("@angular/core/testing");
-var empleados_component_1 = require("./empleados.component");
-describe('EmpleadosComponent', function () {
+var crear_empleado_component_1 = require("./crear-empleado.component");
+describe('CrearEmpleadoComponent', function () {
     var component;
     var fixture;
     beforeEach(function () { return __awaiter(void 0, void 0, void 0, function () {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0: return [4 /*yield*/, testing_1.TestBed.configureTestingModule({
-                        declarations: [empleados_component_1.EmpleadosComponent]
+                        declarations: [crear_empleado_component_1.CrearEmpleadoComponent]
                     })
                         .compileComponents()];
                 case 1:
@@ -55,7 +55,7 @@ describe('EmpleadosComponent', function () {
         });
     }); });
     beforeEach(function () {
-        fixture = testing_1.TestBed.createComponent(empleados_component_1.EmpleadosComponent);
+        fixture = testing_1.TestBed.createComponent(crear_empleado_component_1.CrearEmpleadoComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
@@ -63,4 +63,4 @@ describe('EmpleadosComponent', function () {
         expect(component).toBeTruthy();
     });
 });
-//# sourceMappingURL=empleados.component.spec.js.map
+//# sourceMappingURL=crear-empleado.component.spec.js.map

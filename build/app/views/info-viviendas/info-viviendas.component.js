@@ -1,19 +1,34 @@
-import { __decorate } from "tslib";
-import { Component, Input } from '@angular/core';
-let InfoViviendasComponent = class InfoViviendasComponent {
-    constructor() { }
-    ngOnInit() {
-    }
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-__decorate([
-    Input()
-], InfoViviendasComponent.prototype, "vivienda", void 0);
-InfoViviendasComponent = __decorate([
-    Component({
-        selector: 'app-info-viviendas',
-        templateUrl: './info-viviendas.component.html',
-        styleUrls: ['./info-viviendas.component.css']
-    })
-], InfoViviendasComponent);
-export { InfoViviendasComponent };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InfoViviendasComponent = void 0;
+var core_1 = require("@angular/core");
+var InfoViviendasComponent = /** @class */ (function () {
+    function InfoViviendasComponent() {
+    }
+    InfoViviendasComponent.prototype.ngOnInit = function () {
+    };
+    __decorate([
+        (0, core_1.Input)(),
+        __metadata("design:type", Object)
+    ], InfoViviendasComponent.prototype, "vivienda", void 0);
+    InfoViviendasComponent = __decorate([
+        (0, core_1.Component)({
+            selector: 'app-info-viviendas',
+            templateUrl: './info-viviendas.component.html',
+            styleUrls: ['./info-viviendas.component.css']
+        }),
+        __metadata("design:paramtypes", [])
+    ], InfoViviendasComponent);
+    return InfoViviendasComponent;
+}());
+exports.InfoViviendasComponent = InfoViviendasComponent;
 //# sourceMappingURL=info-viviendas.component.js.map

@@ -1,43 +1,75 @@
-import { Vivienda } from './vivienda';
-export class Chalet extends Vivienda {
-    constructor(idVivienda, largo, ancho, ubicacion, caracteristicas, estado, piscina, largojardin, anchojardin) {
-        super(idVivienda, largo, ancho, ubicacion, caracteristicas, estado);
-        this._piscina = piscina;
-        this._largojardin = largojardin;
-        this._anchojardin = anchojardin;
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Chalet = void 0;
+var vivienda_1 = require("./vivienda");
+var Chalet = /** @class */ (function (_super) {
+    __extends(Chalet, _super);
+    function Chalet(idVivienda, largo, ancho, ubicacion, caracteristicas, estado, piscina, largojardin, anchojardin) {
+        var _this = _super.call(this, idVivienda, largo, ancho, ubicacion, caracteristicas, estado) || this;
+        _this._piscina = piscina;
+        _this._largojardin = largojardin;
+        _this._anchojardin = anchojardin;
+        return _this;
     }
-    get piscina() {
-        return this._piscina;
-    }
-    get largojardin() {
-        return this._largojardin;
-    }
-    get anchojardin() {
-        return this._anchojardin;
-    }
-    set piscina(piscina) {
-        this._piscina = piscina;
-    }
-    set largojardin(largo) {
-        this._largojardin = largo;
-    }
-    set anchojardin(ancho) {
-        this._anchojardin = ancho;
-    }
+    Object.defineProperty(Chalet.prototype, "piscina", {
+        get: function () {
+            return this._piscina;
+        },
+        set: function (piscina) {
+            this._piscina = piscina;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Chalet.prototype, "largojardin", {
+        get: function () {
+            return this._largojardin;
+        },
+        set: function (largo) {
+            this._largojardin = largo;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Chalet.prototype, "anchojardin", {
+        get: function () {
+            return this._anchojardin;
+        },
+        set: function (ancho) {
+            this._anchojardin = ancho;
+        },
+        enumerable: false,
+        configurable: true
+    });
     //La anulación de métodos es un proceso de anulación de un método de superclase 
     //por un método del mismo nombre y parámetros en una subclase.
     //La anulación de métodos es útil cuando la subclase desea modificar el comportamiento de la superclase para ciertas tareas
-    preciom2() {
-        let preciom2 = super.preciom2();
-        let preciojardin = this.m2jardin();
+    Chalet.prototype.preciom2 = function () {
+        var preciom2 = _super.prototype.preciom2.call(this);
+        var preciojardin = this.m2jardin();
         preciom2 = preciom2 + preciojardin;
         if (this._piscina == true) {
             preciom2 += 200;
         }
         return Math.round(preciom2);
-    }
-    m2jardin() {
-        let preciom2jardin;
+    };
+    Chalet.prototype.m2jardin = function () {
+        var preciom2jardin;
         if (this.ubicacion.ciudad == 'sevilla') {
             preciom2jardin = this.sjardin() * 1386;
             return preciom2jardin;
@@ -70,16 +102,18 @@ export class Chalet extends Vivienda {
             preciom2jardin = this.sjardin() * 1253;
             return preciom2jardin;
         }
-    }
-    sjardin() {
-        let sjardin;
+    };
+    Chalet.prototype.sjardin = function () {
+        var sjardin;
         sjardin = this._anchojardin * this._largojardin;
         return sjardin;
-    }
-    todo() {
-        let resultado;
-        resultado = `${super.todo()}, ¿Tiene piscina?: ${this._piscina}, Superficie del jardin(m2): ${this.sjardin()}, `;
+    };
+    Chalet.prototype.todo = function () {
+        var resultado;
+        resultado = _super.prototype.todo.call(this) + ", \u00BFTiene piscina?: " + this._piscina + ", Superficie del jardin(m2): " + this.sjardin() + ", ";
         return resultado;
-    }
-}
+    };
+    return Chalet;
+}(vivienda_1.Vivienda));
+exports.Chalet = Chalet;
 //# sourceMappingURL=chalet.js.map

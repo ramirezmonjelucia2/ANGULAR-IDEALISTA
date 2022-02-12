@@ -1,3 +1,4 @@
+"use strict";
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
  * You can add your own extra polyfills to this file.
@@ -13,6 +14,7 @@
  *
  * Learn more in https://angular.io/guide/browser-support
  */
+Object.defineProperty(exports, "__esModule", { value: true });
 /***************************************************************************************************
  * BROWSER POLYFILLS
  */
@@ -42,7 +44,7 @@
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
-import 'zone.js'; // Included with Angular CLI.
+require("zone.js"); // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
