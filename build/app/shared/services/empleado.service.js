@@ -25,6 +25,10 @@ var EmpleadoService = /** @class */ (function () {
         var url = this.url + "/empleados";
         return this.httpClient.post(url, empleado);
     };
+    EmpleadoService.prototype.eliminarEmpleado = function (id) {
+        var url = this.url + "/deleteEmpleado/" + id;
+        return this.httpClient.delete(url);
+    };
     EmpleadoService = __decorate([
         (0, core_1.Injectable)({
             providedIn: 'root'

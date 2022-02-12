@@ -16,9 +16,13 @@ export class EmpleadosComponent implements OnInit {
   ngOnInit() {
     this.getEmpleados();
   }
-  
+
   public getEmpleados(): void {
     this.empleadoService.getEmpleados().subscribe(empleados => this.empleados = empleados)
+  }
+
+  eliminarEmpleado(id: number) {
+    this.empleadoService.eliminarEmpleado(id).subscribe(() => { console.log('asdasd') })
   }
 
 }

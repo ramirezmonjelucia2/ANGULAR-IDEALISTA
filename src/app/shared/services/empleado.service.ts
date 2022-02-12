@@ -23,6 +23,12 @@ export class EmpleadoService {
     const url = `${this.url}/empleados`;
     return this.httpClient.post(url, empleado);
   }
+
+  eliminarEmpleado(id: number): Observable<any> {
+    const url = `${this.url}/deleteEmpleado/${id}`;
+    return this.httpClient.delete(url)
+  }
 }
-  
+
+
 
