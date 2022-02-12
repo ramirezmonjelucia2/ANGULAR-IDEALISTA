@@ -24,7 +24,7 @@ var CrearEmpleadoComponent = /** @class */ (function () {
             email: ['', [forms_1.Validators.required, forms_1.Validators.email]],
             telefono: ['', forms_1.Validators.required],
             sueldobase: ['', forms_1.Validators.required],
-            comisionventa: ['', forms_1.Validators.required],
+            comisionventa: ['', forms_1.Validators.required]
         });
     }
     CrearEmpleadoComponent.prototype.ngOnInit = function () {
@@ -42,7 +42,11 @@ var CrearEmpleadoComponent = /** @class */ (function () {
             sueldobase: this.crearEmpleado.value.sueldobase,
             comisionventa: this.crearEmpleado.value.comisionventa
         };
-        this.empleadoService.agregarEmpleado(empleado);
+        this.empleadoService.agregarEmpleado(empleado).subscribe(function () {
+            console.log("dasfasdasd");
+        }), function (error) {
+            console.log(error);
+        };
     };
     CrearEmpleadoComponent = __decorate([
         (0, core_1.Component)({

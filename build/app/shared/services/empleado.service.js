@@ -19,11 +19,11 @@ var EmpleadoService = /** @class */ (function () {
         this.url = "http://localhost:3000";
     }
     EmpleadoService.prototype.getEmpleados = function () {
-        return this.httpClient.get(this.url);
+        return this.httpClient.get(this.url + "/empleados");
     };
     EmpleadoService.prototype.agregarEmpleado = function (empleado) {
         var url = this.url + "/empleados";
-        return this.httpClient.post(url, empleado), { responseType: 'json' };
+        return this.httpClient.post(url, empleado);
     };
     EmpleadoService = __decorate([
         (0, core_1.Injectable)({

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Empleado } from 'src/app/shared/classes/empleado';
 import { EmpleadoService } from 'src/app/shared/services/empleado.service';
 
 @Component({
@@ -20,11 +19,7 @@ export class CrearEmpleadoComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       telefono: ['', Validators.required],
       sueldobase: ['', Validators.required],
-      comisionventa: ['', Validators.required],
-
-
-
-
+      comisionventa: ['', Validators.required]
     })
   }
 
@@ -38,7 +33,6 @@ export class CrearEmpleadoComponent implements OnInit {
       return;
     }
     const empleado: any = {
-
       idEmpleado: this.crearEmpleado.value.idEmpleado,
       nombre: this.crearEmpleado.value.nombre,
       email: this.crearEmpleado.value.email,
@@ -46,6 +40,15 @@ export class CrearEmpleadoComponent implements OnInit {
       sueldobase: this.crearEmpleado.value.sueldobase,
       comisionventa: this.crearEmpleado.value.comisionventa
     }
-    this.empleadoService.agregarEmpleado(empleado)
+    this.empleadoService.agregarEmpleado(empleado).subscribe(
+      () => {
+        console.log("dasfasdasd")
+      }
+
+    ), (error) => {
+      console.log(error);
+
+
+    }
   }
 }
