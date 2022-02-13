@@ -3,17 +3,20 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { AboutMeComponent } from './views/about-me/about-me.component';
+import { CasasComponent } from './views/casas/casas.component';
+import { ChaletsComponent } from './views/chalets/chalets.component';
 import { CrearEmpleadoComponent } from './views/crear-empleado/crear-empleado.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { EditarEmpleadoComponent } from './views/editar-empleado/editar-empleado.component';
 import { EmpleadosComponent } from './views/empleados/empleados.component';
-import { ViviendasComponent } from './views/viviendas/viviendas.component';
 
 const routes: Routes = [
-  { path: 'listado', component: ViviendasComponent },
+  { path: 'listadocasa', component: CasasComponent},
   { path: 'aboutME', component: AboutMeComponent },
   { path: 'empleados', component: EmpleadosComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'listadochalet', component: ChaletsComponent },
+
   { path: 'crear-empleado', component: CrearEmpleadoComponent },
   { path: 'editar-empleado/:idEmpleado', component: EditarEmpleadoComponent },
 

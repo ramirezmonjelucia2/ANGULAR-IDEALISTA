@@ -1,0 +1,32 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <span class="h3">Listado de Casas</span>
+            <button class="btn btn-dark btn-lg float-right">Agregar</button>
+            <table class="table table-striped mt-5">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Superficie</th>
+                        <th>Ubicacion</th>
+                        <th>Habitaciones</th>
+                        <th>Precio</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let vivienda of OCasa">
+                        <td>{{vivienda.idVivienda}}</td>
+                        <td>{{vivienda.superficie()}}</td>
+                        <td>{{vivienda.ubi()}}</td>
+                        <td>{{vivienda.caracteristicas.habitaciones}}</td>
+                        <td>{{vivienda.preciom2()| currency}}</td>
+                        <td>
+                            <button class="btn btn-dark btn-sm">VENDER</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

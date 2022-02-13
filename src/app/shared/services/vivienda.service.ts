@@ -1,26 +1,26 @@
 import { Injectable } from '@angular/core';
-import {  Vivienda } from '../interfaces/interfaces';
-import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ViviendaService {
-  private url = "http://localhost:3000/viviendas"
+  private url = "http://localhost:3000"
 
   constructor(
     private httpClient: HttpClient
   ) { }
 
-  getVivi() {
-    return this.httpClient.get(this.url);
-  }
-  /*
-  getViviendas(): Observable<any> {
-    const url = `${this.url}/viviendas`;
+  
+
+  getCasa(){
+    const url = `${this.url}/viviendas/Casa`;
     return this.httpClient.get(url);
   }
-*/
 
+
+  getChalet(){
+    const url = `${this.url}/viviendas/Chalet`;
+    return this.httpClient.get(url);
+  }
 }

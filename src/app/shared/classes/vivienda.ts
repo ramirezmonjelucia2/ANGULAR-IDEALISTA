@@ -105,7 +105,7 @@ export abstract class Vivienda {
 
   //Calcular el precio de la vivienda, según la ubicación el precio del m2 varía.
   preciom2() {
-    let preciom2: any;
+    let preciom2: number;
     if (this.ubicacion.ciudad == 'sevilla') {
       preciom2 = 1386 * this.superficie();
     } else if (this.ubicacion.ciudad == 'almeria') {

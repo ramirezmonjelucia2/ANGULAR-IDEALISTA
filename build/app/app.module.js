@@ -16,11 +16,12 @@ var app_component_1 = require("./app.component");
 var empleados_component_1 = require("./views/empleados/empleados.component");
 var about_me_component_1 = require("./views/about-me/about-me.component");
 var dashboard_component_1 = require("./views/dashboard/dashboard.component");
-var viviendas_component_1 = require("./views/viviendas/viviendas.component");
 var info_viviendas_component_1 = require("./views/info-viviendas/info-viviendas.component");
 var crear_empleado_component_1 = require("./views/crear-empleado/crear-empleado.component");
 var editar_empleado_component_1 = require("./views/editar-empleado/editar-empleado.component");
 var highcharts_angular_1 = require("highcharts-angular");
+var chalets_component_1 = require("./views/chalets/chalets.component");
+var casas_component_1 = require("./views/casas/casas.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -32,9 +33,10 @@ var AppModule = /** @class */ (function () {
                 about_me_component_1.AboutMeComponent,
                 dashboard_component_1.DashboardComponent,
                 info_viviendas_component_1.InfoViviendasComponent,
-                viviendas_component_1.ViviendasComponent,
                 crear_empleado_component_1.CrearEmpleadoComponent,
                 editar_empleado_component_1.EditarEmpleadoComponent,
+                chalets_component_1.ChaletsComponent,
+                casas_component_1.CasasComponent,
             ],
             imports: [
                 platform_browser_1.BrowserModule,

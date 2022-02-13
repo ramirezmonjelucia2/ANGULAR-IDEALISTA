@@ -30,9 +30,6 @@ var Chalet = /** @class */ (function (_super) {
         get: function () {
             return this._piscina;
         },
-        set: function (piscina) {
-            this._piscina = piscina;
-        },
         enumerable: false,
         configurable: true
     });
@@ -40,18 +37,12 @@ var Chalet = /** @class */ (function (_super) {
         get: function () {
             return this._largojardin;
         },
-        set: function (largo) {
-            this._largojardin = largo;
-        },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(Chalet.prototype, "anchojardin", {
         get: function () {
             return this._anchojardin;
-        },
-        set: function (ancho) {
-            this._anchojardin = ancho;
         },
         enumerable: false,
         configurable: true
@@ -69,41 +60,32 @@ var Chalet = /** @class */ (function (_super) {
         var preciom2jardin;
         if (this.ubicacion.ciudad == 'sevilla') {
             preciom2jardin = this.sjardin() * 1386;
-            return preciom2jardin;
         }
         else if (this.ubicacion.ciudad == 'almeria') {
             preciom2jardin = this.sjardin() * 1088;
-            return preciom2jardin;
         }
         else if (this.ubicacion.ciudad == 'jaen') {
             preciom2jardin = this.sjardin() * 823;
-            return preciom2jardin;
         }
         else if (this.ubicacion.ciudad == 'malaga') {
             preciom2jardin = this.sjardin() * 2442;
-            return preciom2jardin;
         }
         else if (this.ubicacion.ciudad == 'granada') {
             preciom2jardin = this.sjardin() * 1375;
-            return preciom2jardin;
         }
         else if (this.ubicacion.ciudad == 'cadiz') {
             preciom2jardin = this.sjardin() * 1555;
-            return preciom2jardin;
         }
         else if (this.ubicacion.ciudad == 'cordoba') {
             preciom2jardin = this.sjardin() * 1220;
-            return preciom2jardin;
         }
         else if (this.ubicacion.ciudad == 'huelva') {
             preciom2jardin = this.sjardin() * 1253;
-            return preciom2jardin;
         }
+        return preciom2jardin;
     };
     Chalet.prototype.sjardin = function () {
-        var sjardin;
-        sjardin = this._anchojardin * this._largojardin;
-        return sjardin;
+        return this._anchojardin * this._largojardin;
     };
     Chalet.prototype.todo = function () {
         var resultado;

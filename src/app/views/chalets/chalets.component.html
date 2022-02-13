@@ -1,7 +1,8 @@
+<br><br>
 <div class="container mt-4">
     <div class="card">
         <div class="card-body">
-            <span class="h3">Listado de Casas</span>
+            <span class="h3">Listado de Chalets</span>
             <button class="btn btn-dark btn-lg float-right">Agregar</button>
             <table class="table table-striped mt-5">
                 <thead>
@@ -11,23 +12,21 @@
                         <th>Ubicacion</th>
                         <th>Habitaciones</th>
                         <th>Precio</th>
+                        <th>Superficie Jardin</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let vivienda of Oviviendas">
+                    <tr *ngFor="let vivienda of OChalet">
                         <td>{{vivienda.idVivienda}}</td>
                         <td>{{vivienda.superficie()}}</td>
                         <td>{{vivienda.ubi()}}</td>
-                        
+                        <td>{{vivienda.caracteristicas.habitaciones}}</td>
+                        <td>{{vivienda.preciom2() | currency}}</td>
+                        <td>{{vivienda.sjardin()}}</td>
+                        <td></td>
                         <td>
-                            {{vivienda.caracteristicas.habitaciones}}<br>
-                        </td>
-                        <td>{{vivienda.preciom2()| currency}}</td>
-                        <td>
-                            <button class="btn btn-dark mr-2">BORRAR</button>
-                            <button class="btn btn-dark">VENDER</button>
-
+                            <button class="btn btn-sm btn-dark">VENDER</button>
                         </td>
                     </tr>
                 </tbody>

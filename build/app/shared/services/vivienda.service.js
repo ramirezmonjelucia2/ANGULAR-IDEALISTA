@@ -15,10 +15,15 @@ var http_1 = require("@angular/common/http");
 var ViviendaService = /** @class */ (function () {
     function ViviendaService(httpClient) {
         this.httpClient = httpClient;
-        this.url = "http://localhost:3000/viviendas";
+        this.url = "http://localhost:3000";
     }
-    ViviendaService.prototype.getVivi = function () {
-        return this.httpClient.get(this.url);
+    ViviendaService.prototype.getCasa = function () {
+        var url = this.url + "/viviendas/Casa";
+        return this.httpClient.get(url);
+    };
+    ViviendaService.prototype.getChalet = function () {
+        var url = this.url + "/viviendas/Chalet";
+        return this.httpClient.get(url);
     };
     ViviendaService = __decorate([
         (0, core_1.Injectable)({

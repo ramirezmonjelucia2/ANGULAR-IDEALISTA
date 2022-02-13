@@ -42,17 +42,9 @@ export class Chalet extends Vivienda {
   get anchojardin() {
     return this._anchojardin;
   }
-  set piscina(piscina: boolean) {
-    this._piscina = piscina;
-  }
-  set largojardin(largo: number) {
-    this._largojardin = largo;
-  }
-  set anchojardin(ancho: number) {
-    this._anchojardin = ancho;
-  }
+ 
 
- preciom2() {
+  preciom2() {
     let preciom2 = super.preciom2();
     let preciojardin = this.m2jardin();
     preciom2 = preciom2 + preciojardin;
@@ -62,46 +54,37 @@ export class Chalet extends Vivienda {
     return Math.round(preciom2);
   }
 
+
   m2jardin() {
-    let preciom2jardin: any;
+    let preciom2jardin: number;
     if (this.ubicacion.ciudad == 'sevilla') {
       preciom2jardin = this.sjardin() * 1386;
-      return preciom2jardin;
     } else if (this.ubicacion.ciudad == 'almeria') {
       preciom2jardin = this.sjardin() * 1088;
-      return preciom2jardin;
     } else if (this.ubicacion.ciudad == 'jaen') {
       preciom2jardin = this.sjardin() * 823;
-      return preciom2jardin;
     } else if (this.ubicacion.ciudad == 'malaga') {
       preciom2jardin = this.sjardin() * 2442;
-      return preciom2jardin;
     } else if (this.ubicacion.ciudad == 'granada') {
       preciom2jardin = this.sjardin() * 1375;
-      return preciom2jardin;
     } else if (this.ubicacion.ciudad == 'cadiz') {
       preciom2jardin = this.sjardin() * 1555;
-      return preciom2jardin;
     } else if (this.ubicacion.ciudad == 'cordoba') {
       preciom2jardin = this.sjardin() * 1220;
-      return preciom2jardin;
     } else if (this.ubicacion.ciudad == 'huelva') {
       preciom2jardin = this.sjardin() * 1253;
-      return preciom2jardin;
     }
+    return preciom2jardin
   }
 
   sjardin(): number {
-    let sjardin: number;
-    sjardin = this._anchojardin * this._largojardin;
-    return sjardin;
+    return this._anchojardin * this._largojardin;
   }
 
-   todo() {
+  todo() {
     let resultado: string;
-    resultado = `${super.todo()}, ¿Tiene piscina?: ${
-      this._piscina
-    }, Superficie del jardin(m2): ${this.sjardin()}, `;
+    resultado = `${super.todo()}, ¿Tiene piscina?: ${this._piscina
+      }, Superficie del jardin(m2): ${this.sjardin()}, `;
     return resultado;
   }
 }

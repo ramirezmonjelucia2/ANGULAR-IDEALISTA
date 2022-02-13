@@ -11,11 +11,12 @@ import { AppComponent } from './app.component';
 import { EmpleadosComponent } from './views/empleados/empleados.component';
 import { AboutMeComponent } from './views/about-me/about-me.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
-import { ViviendasComponent } from './views/viviendas/viviendas.component';
 import { InfoViviendasComponent } from './views/info-viviendas/info-viviendas.component';
 import { CrearEmpleadoComponent } from './views/crear-empleado/crear-empleado.component';
 import { EditarEmpleadoComponent } from './views/editar-empleado/editar-empleado.component';
 import { HighchartsChartModule } from 'highcharts-angular';
+import { ChaletsComponent } from './views/chalets/chalets.component';
+import { CasasComponent } from './views/casas/casas.component';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,10 @@ import { HighchartsChartModule } from 'highcharts-angular';
     AboutMeComponent,
     DashboardComponent,
     InfoViviendasComponent,
-    ViviendasComponent,
     CrearEmpleadoComponent,
     EditarEmpleadoComponent,
+    ChaletsComponent,
+    CasasComponent,
   ],
   imports: [
     BrowserModule,
