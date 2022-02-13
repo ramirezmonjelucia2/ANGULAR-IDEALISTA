@@ -23,7 +23,7 @@ var CasasComponent = /** @class */ (function () {
     CasasComponent.prototype.Casa = function () {
         var _this = this;
         this.viviendaService.getCasa().subscribe(function (casa) {
-            _this.OCasa = casa.map(function (x) {
+            _this.viviendas = casa.map(function (x) {
                 return new casa_1.Casa(x.idVivienda, x.largo, x.ancho, x.ubicacion, x.caracteristicas, x.estado, x.cochera);
             });
         });

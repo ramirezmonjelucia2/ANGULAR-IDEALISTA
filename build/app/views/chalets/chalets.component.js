@@ -23,7 +23,7 @@ var ChaletsComponent = /** @class */ (function () {
     ChaletsComponent.prototype.Chalet = function () {
         var _this = this;
         this.viviendaService.getChalet().subscribe(function (chalet) {
-            _this.OChalet = chalet.map(function (x) {
+            _this.viviendas = chalet.map(function (x) {
                 return new chalet_1.Chalet(x.idVivienda, x.largo, x.ancho, x.ubicacion, x.caracteristicas, x.estado, x.piscina, x.largojardin, x.anchojardin);
             });
         });

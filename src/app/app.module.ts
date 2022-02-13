@@ -7,9 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HighchartsChartModule } from 'highcharts-angular';
 
 
-
 import { AppComponent } from './app.component';
-
 import { EmpleadosComponent } from './views/empleados/empleados.component';
 import { AboutMeComponent } from './views/about-me/about-me.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
