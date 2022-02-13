@@ -18,6 +18,7 @@ import { CrearEmpleadoComponent } from './views/crear-empleado/crear-empleado.co
 import { EditarEmpleadoComponent } from './views/editar-empleado/editar-empleado.component';
 import { ChaletsComponent } from './views/chalets/chalets.component';
 import { CasasComponent } from './views/casas/casas.component';
+import { BubblechartComponent } from './views/bubblechart/bubblechart.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { CasasComponent } from './views/casas/casas.component';
     EditarEmpleadoComponent,
     ChaletsComponent,
     CasasComponent,
+    BubblechartComponent,
   ],
   imports: [
     BrowserModule,

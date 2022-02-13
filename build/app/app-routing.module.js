@@ -10,6 +10,7 @@ exports.AppRoutingModule = void 0;
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var about_me_component_1 = require("./views/about-me/about-me.component");
+var bubblechart_component_1 = require("./views/bubblechart/bubblechart.component");
 var casas_component_1 = require("./views/casas/casas.component");
 var chalets_component_1 = require("./views/chalets/chalets.component");
 var crear_empleado_component_1 = require("./views/crear-empleado/crear-empleado.component");
@@ -22,6 +23,7 @@ var routes = [
     { path: 'empleados', component: empleados_component_1.EmpleadosComponent },
     { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
     { path: 'listadochalet', component: chalets_component_1.ChaletsComponent },
+    { path: 'grafico', component: bubblechart_component_1.BubblechartComponent },
     { path: 'crear-empleado', component: crear_empleado_component_1.CrearEmpleadoComponent },
     { path: 'editar-empleado/:idEmpleado', component: editar_empleado_component_1.EditarEmpleadoComponent },
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },

@@ -23,6 +23,7 @@ var crear_empleado_component_1 = require("./views/crear-empleado/crear-empleado.
 var editar_empleado_component_1 = require("./views/editar-empleado/editar-empleado.component");
 var chalets_component_1 = require("./views/chalets/chalets.component");
 var casas_component_1 = require("./views/casas/casas.component");
+var bubblechart_component_1 = require("./views/bubblechart/bubblechart.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -38,6 +39,7 @@ var AppModule = /** @class */ (function () {
                 editar_empleado_component_1.EditarEmpleadoComponent,
                 chalets_component_1.ChaletsComponent,
                 casas_component_1.CasasComponent,
+                bubblechart_component_1.BubblechartComponent,
             ],
             imports: [
                 platform_browser_1.BrowserModule,

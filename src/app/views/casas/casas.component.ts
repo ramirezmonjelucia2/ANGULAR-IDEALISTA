@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Casa } from 'src/app/shared/classes/casa';
 import { ViviendaService } from 'src/app/shared/services/vivienda.service';
+
 @Component({
   selector: 'app-casas',
   templateUrl: './casas.component.html',
