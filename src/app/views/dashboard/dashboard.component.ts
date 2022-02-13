@@ -17,21 +17,22 @@ export class DashboardComponent implements OnInit {
       type: "column"
     },
     title: {
-      text: 'Salarios de los empleados según sus ventas'
+      text: 'Viviendas vendidas de los empleados'
     },
 
     xAxis: {
+     
       categories: []
     },
     yAxis: {
       title: {
-        text: 'Salario'
+        text: 'Ventas'
       }
     },
     series: [
       {
         type: "column",
-        name: "Salario",
+        name: "Ventas",
         data: []
       }
     ],
@@ -60,11 +61,11 @@ export class DashboardComponent implements OnInit {
             return new Empleado(empleado.idEmpleado, empleado.nombre, empleado.email, empleado.telefono, empleado.suelbase, empleado.comisionventa, empleado.numeroVentas);
           });
           // Creamos los objetos y usamos un método para representar el valor devuelto
-          const dataSeries = this.OEmpleado.map((x: Empleado) => x.salario);
+          const dataSeries = this.OEmpleado.map((x: Empleado) => x.numeroVentas);
           const dataCategorias = this.OEmpleado.map((x: Empleado) => x.nombre);
           this.chartOptions.series[0]["data"] = dataSeries;
           this.chartOptions.xAxis["categories"] = dataCategorias;
-          Highcharts.chart("grafsalarios", this.chartOptions);
+          Highcharts.chart("grafventas", this.chartOptions);
         },
         error => console.log(error)
       );

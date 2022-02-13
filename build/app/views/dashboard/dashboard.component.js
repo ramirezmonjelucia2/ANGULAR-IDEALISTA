@@ -23,20 +23,20 @@ var DashboardComponent = /** @class */ (function () {
                 type: "column"
             },
             title: {
-                text: 'Salarios de los empleados según sus ventas'
+                text: 'Viviendas vendidas de los empleados'
             },
             xAxis: {
                 categories: []
             },
             yAxis: {
                 title: {
-                    text: 'Salario'
+                    text: 'Ventas'
                 }
             },
             series: [
                 {
                     type: "column",
-                    name: "Salario",
+                    name: "Ventas",
                     data: []
                 }
             ],
@@ -60,11 +60,11 @@ var DashboardComponent = /** @class */ (function () {
                 return new empleado_1.Empleado(empleado.idEmpleado, empleado.nombre, empleado.email, empleado.telefono, empleado.suelbase, empleado.comisionventa, empleado.numeroVentas);
             });
             // Creamos los objetos y usamos un método para representar el valor devuelto
-            var dataSeries = _this.OEmpleado.map(function (x) { return x.salario; });
+            var dataSeries = _this.OEmpleado.map(function (x) { return x.numeroVentas; });
             var dataCategorias = _this.OEmpleado.map(function (x) { return x.nombre; });
             _this.chartOptions.series[0]["data"] = dataSeries;
             _this.chartOptions.xAxis["categories"] = dataCategorias;
-            Highcharts.chart("grafsalarios", _this.chartOptions);
+            Highcharts.chart("grafventas", _this.chartOptions);
         }, function (error) { return console.log(error); });
     };
     DashboardComponent = __decorate([
