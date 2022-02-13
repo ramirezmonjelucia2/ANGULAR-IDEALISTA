@@ -25,8 +25,16 @@ export class Empleado {
     this.numeroVentas = numeroVentas
   }
 
-
-  public salario() {
+  get _sueldobase() {
+    return this.sueldobase;
+  }
+  get _comisionventa() {
+    return this.comisionventa;
+  }
+  get _numeroVentas() {
+    return this.numeroVentas;
+  }
+  get salario() {
     return Math.round(this.sueldobase + (this.numeroVentas * this.comisionventa))
   }
 }

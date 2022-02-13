@@ -15,102 +15,33 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Chalet = void 0;
+exports.Casa = void 0;
 var vivienda_1 = require("./vivienda");
-var Chalet = /** @class */ (function (_super) {
-    __extends(Chalet, _super);
-    function Chalet(idVivienda, largo, ancho, ubicacion, caracteristicas, estado, piscina, largojardin, anchojardin) {
+var Casa = /** @class */ (function (_super) {
+    __extends(Casa, _super);
+    function Casa(idVivienda, largo, ancho, ubicacion, caracteristicas, estado, cochera) {
         var _this = _super.call(this, idVivienda, largo, ancho, ubicacion, caracteristicas, estado) || this;
-        _this._piscina = piscina;
-        _this._largojardin = largojardin;
-        _this._anchojardin = anchojardin;
+        _this._cochera = cochera;
         return _this;
     }
-    Object.defineProperty(Chalet.prototype, "piscina", {
-        get: function () {
-            return this._piscina;
-        },
-        set: function (piscina) {
-            this._piscina = piscina;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Chalet.prototype, "largojardin", {
-        get: function () {
-            return this._largojardin;
-        },
-        set: function (largo) {
-            this._largojardin = largo;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Chalet.prototype, "anchojardin", {
-        get: function () {
-            return this._anchojardin;
-        },
-        set: function (ancho) {
-            this._anchojardin = ancho;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Chalet.prototype.preciom2 = function () {
+    Casa.prototype.preciom2 = function () {
         var preciom2 = _super.prototype.preciom2.call(this);
-        var preciojardin = this.m2jardin();
-        preciom2 = preciom2 + preciojardin;
-        if (this._piscina == true) {
-            preciom2 += 200;
+        if (this._cochera == true) {
+            preciom2 += 1.000;
         }
         return Math.round(preciom2);
     };
-    Chalet.prototype.m2jardin = function () {
-        var preciom2jardin;
-        if (this.ubicacion.ciudad == 'sevilla') {
-            preciom2jardin = this.sjardin() * 1386;
-            return preciom2jardin;
-        }
-        else if (this.ubicacion.ciudad == 'almeria') {
-            preciom2jardin = this.sjardin() * 1088;
-            return preciom2jardin;
-        }
-        else if (this.ubicacion.ciudad == 'jaen') {
-            preciom2jardin = this.sjardin() * 823;
-            return preciom2jardin;
-        }
-        else if (this.ubicacion.ciudad == 'malaga') {
-            preciom2jardin = this.sjardin() * 2442;
-            return preciom2jardin;
-        }
-        else if (this.ubicacion.ciudad == 'granada') {
-            preciom2jardin = this.sjardin() * 1375;
-            return preciom2jardin;
-        }
-        else if (this.ubicacion.ciudad == 'cadiz') {
-            preciom2jardin = this.sjardin() * 1555;
-            return preciom2jardin;
-        }
-        else if (this.ubicacion.ciudad == 'cordoba') {
-            preciom2jardin = this.sjardin() * 1220;
-            return preciom2jardin;
-        }
-        else if (this.ubicacion.ciudad == 'huelva') {
-            preciom2jardin = this.sjardin() * 1253;
-            return preciom2jardin;
-        }
+    Object.defineProperty(Casa.prototype, "cochera", {
+        get: function () {
+            return this._cochera;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Casa.prototype.todo = function () {
+        return _super.prototype.todo.call(this) + "Dispone de cochera: " + this._cochera;
     };
-    Chalet.prototype.sjardin = function () {
-        var sjardin;
-        sjardin = this._anchojardin * this._largojardin;
-        return sjardin;
-    };
-    Chalet.prototype.todo = function () {
-        var resultado;
-        resultado = _super.prototype.todo.call(this) + ", \u00BFTiene piscina?: " + this._piscina + ", Superficie del jardin(m2): " + this.sjardin() + ", ";
-        return resultado;
-    };
-    return Chalet;
+    return Casa;
 }(vivienda_1.Vivienda));
-exports.Chalet = Chalet;
+exports.Casa = Casa;
 //# sourceMappingURL=casa.js.map

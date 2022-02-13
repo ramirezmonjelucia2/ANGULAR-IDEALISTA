@@ -56,9 +56,6 @@ var Chalet = /** @class */ (function (_super) {
         enumerable: false,
         configurable: true
     });
-    //La anulación de métodos es un proceso de anulación de un método de superclase 
-    //por un método del mismo nombre y parámetros en una subclase.
-    //La anulación de métodos es útil cuando la subclase desea modificar el comportamiento de la superclase para ciertas tareas
     Chalet.prototype.preciom2 = function () {
         var preciom2 = _super.prototype.preciom2.call(this);
         var preciojardin = this.m2jardin();

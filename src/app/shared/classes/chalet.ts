@@ -22,7 +22,7 @@ export class Chalet extends Vivienda {
     estado: {
       vendido: boolean;
       fecha: Date | null;
-      empleado: string;
+      empleado: number;
     },
     piscina: boolean,
     largojardin: number,
@@ -51,10 +51,8 @@ export class Chalet extends Vivienda {
   set anchojardin(ancho: number) {
     this._anchojardin = ancho;
   }
-//La anulación de métodos es un proceso de anulación de un método de superclase 
-//por un método del mismo nombre y parámetros en una subclase.
-//La anulación de métodos es útil cuando la subclase desea modificar el comportamiento de la superclase para ciertas tareas
-  override preciom2() {
+
+ preciom2() {
     let preciom2 = super.preciom2();
     let preciojardin = this.m2jardin();
     preciom2 = preciom2 + preciojardin;
@@ -99,7 +97,7 @@ export class Chalet extends Vivienda {
     return sjardin;
   }
 
-  override todo() {
+   todo() {
     let resultado: string;
     resultado = `${super.todo()}, ¿Tiene piscina?: ${
       this._piscina

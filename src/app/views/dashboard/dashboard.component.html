@@ -1,9 +1,8 @@
-<h3>Top Empleados</h3>
-<div class="grid grid-pad">
-    <!--  El repetidor *ngFor crea tantos enlaces como hay en en el arreglo empleados del componente. -->
-    <a *ngFor="let empleado of empleados" class="col-1-4">
-        <div class="module empleado">
-            <h4>{{empleado.nombre}}</h4>
-        </div>
-    </a>
-</div>
+<div id="grafsalarios">
+    <highcharts-chart
+      [Highcharts]="Highcharts"
+      [options]="chartOptions"
+      style="width: 100%; height: 400px; display: block;"
+    ></highcharts-chart>
+  </div>
+  

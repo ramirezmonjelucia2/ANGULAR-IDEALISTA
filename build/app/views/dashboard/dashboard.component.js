@@ -11,21 +11,61 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DashboardComponent = void 0;
 var core_1 = require("@angular/core");
+var Highcharts = require("highcharts");
+var empleado_1 = require("src/app/shared/classes/empleado");
 var empleado_service_1 = require("src/app/shared/services/empleado.service");
 var DashboardComponent = /** @class */ (function () {
     function DashboardComponent(empleadoService) {
         this.empleadoService = empleadoService;
-        this.empleados = [];
+        this.Highcharts = Highcharts;
+        this.chartOptions = {
+            chart: {
+                type: "column"
+            },
+            title: {
+                text: 'Salarios de los empleados según sus ventas'
+            },
+            xAxis: {
+                categories: []
+            },
+            yAxis: {
+                title: {
+                    text: 'Salario'
+                }
+            },
+            series: [
+                {
+                    type: "column",
+                    name: "Salario",
+                    data: []
+                }
+            ],
+            noData: {
+                style: {
+                    fontWeight: "bold",
+                    fontSize: "15px",
+                    color: "#303030"
+                }
+            }
+        };
     }
-    /*El constructor espera que Angular inyecte el HeroService en una propiedad privada de heroService.
-    El método del ciclo de vida ngOnInit() llama a getHeroes(). */
     DashboardComponent.prototype.ngOnInit = function () {
-        this.getEmpleados();
+        this.getMisDatos();
     };
-    DashboardComponent.prototype.getEmpleados = function () {
+    DashboardComponent.prototype.getMisDatos = function () {
         var _this = this;
         this.empleadoService.getEmpleados()
-            .subscribe(function (empleados) { return _this.empleados = empleados; });
+            .subscribe(function (result) {
+            _this.OEmpleado = result.map(function (empleado) {
+                return new empleado_1.Empleado(empleado.idEmpleado, empleado.nombre, empleado.email, empleado.telefono, empleado.suelbase, empleado.comisionventa, empleado.numeroVentas);
+            });
+            // Creamos los objetos y usamos un método para representar el valor devuelto
+            var dataSeries = _this.OEmpleado.map(function (x) { return x.salario; });
+            var dataCategorias = _this.OEmpleado.map(function (x) { return x.nombre; });
+            _this.chartOptions.series[0]["data"] = dataSeries;
+            _this.chartOptions.xAxis["categories"] = dataCategorias;
+            Highcharts.chart("grafsalarios", _this.chartOptions);
+        }, function (error) { return console.log(error); });
     };
     DashboardComponent = __decorate([
         (0, core_1.Component)({

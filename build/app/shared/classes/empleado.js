@@ -11,9 +11,34 @@ var Empleado = /** @class */ (function () {
         this.comisionventa = comisionventa;
         this.numeroVentas = numeroVentas;
     }
-    Empleado.prototype.salario = function () {
-        return Math.round(this.sueldobase + (this.numeroVentas * this.comisionventa));
-    };
+    Object.defineProperty(Empleado.prototype, "_sueldobase", {
+        get: function () {
+            return this.sueldobase;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Empleado.prototype, "_comisionventa", {
+        get: function () {
+            return this.comisionventa;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Empleado.prototype, "_numeroVentas", {
+        get: function () {
+            return this.numeroVentas;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Empleado.prototype, "salario", {
+        get: function () {
+            return Math.round(this.sueldobase + (this.numeroVentas * this.comisionventa));
+        },
+        enumerable: false,
+        configurable: true
+    });
     return Empleado;
 }());
 exports.Empleado = Empleado;

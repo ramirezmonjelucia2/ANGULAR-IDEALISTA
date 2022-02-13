@@ -73,7 +73,9 @@ var Vivienda = /** @class */ (function () {
             this._ubicacion.codpost);
     };
     Vivienda.prototype.est = function () {
-        return ('Vendido: ' + this._estado.vendido + ', Fecha: ' + this._estado.fecha);
+        return ('Vendido: ' + this._estado.vendido +
+            ', Fecha: ' + this._estado.fecha +
+            ', Empleado: ' + this._estado.empleado);
     };
     Vivienda.prototype.carac = function () {
         return ('\nHabitaciones: ' +

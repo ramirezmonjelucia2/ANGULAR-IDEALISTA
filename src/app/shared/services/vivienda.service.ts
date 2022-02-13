@@ -14,7 +14,7 @@ export class ViviendaService {
 
 
   getViviendas(): Observable<Vivienda[]> {
-    return this.httpClient.get<Vivienda[]>("https://idealistav21.herokuapp.com/viviendas");
+    return this.httpClient.get<Vivienda[]>("https://idealista-api.herokuapp.com/viviendas");
   }
   
 

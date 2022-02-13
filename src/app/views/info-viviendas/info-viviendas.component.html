@@ -1,14 +1,14 @@
 <div *ngIf="vivienda">
 
-    <h2>Detalles {{vivienda.tipoObjeto | uppercase}} </h2>
-    <div><span>id: </span>{{vivienda.idVivienda}}</div>
-    <div>
-      <label>Ubicacion:
-        <input [(ngModel)]="vivienda.ubicacion.municipio" placeholder="Municipio"/>
-        <input [(ngModel)]="vivienda.ubicacion.ciudad" placeholder="Ciudad"/>
-        <input [(ngModel)]="vivienda.ubicacion.codpost" placeholder="Codigo Postal"/>
+  <h2>Detalles {{vivienda.tipoObjeto | uppercase}} </h2>
+  <div><span>id: </span>{{vivienda.idVivienda}}</div>
+  <div>
+    <label>Ubicacion:
+      <input [(ngModel)]="vivienda.ubicacion.municipio" placeholder="Municipio"/>
+      <input [(ngModel)]="vivienda.ubicacion.ciudad" placeholder="Ciudad"/>
+      <input [(ngModel)]="vivienda.ubicacion.codpost" placeholder="Codigo Postal"/>
 
-      </label>
-    </div>
-  
+    </label>
   </div>
+
+</div>

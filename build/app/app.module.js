@@ -20,6 +20,7 @@ var viviendas_component_1 = require("./views/viviendas/viviendas.component");
 var info_viviendas_component_1 = require("./views/info-viviendas/info-viviendas.component");
 var crear_empleado_component_1 = require("./views/crear-empleado/crear-empleado.component");
 var editar_empleado_component_1 = require("./views/editar-empleado/editar-empleado.component");
+var highcharts_angular_1 = require("highcharts-angular");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -30,8 +31,8 @@ var AppModule = /** @class */ (function () {
                 empleados_component_1.EmpleadosComponent,
                 about_me_component_1.AboutMeComponent,
                 dashboard_component_1.DashboardComponent,
-                viviendas_component_1.ViviendasComponent,
                 info_viviendas_component_1.InfoViviendasComponent,
+                viviendas_component_1.ViviendasComponent,
                 crear_empleado_component_1.CrearEmpleadoComponent,
                 editar_empleado_component_1.EditarEmpleadoComponent,
             ],
@@ -39,7 +40,8 @@ var AppModule = /** @class */ (function () {
                 platform_browser_1.BrowserModule,
                 app_routing_module_1.AppRoutingModule,
                 http_1.HttpClientModule,
-                forms_1.ReactiveFormsModule
+                forms_1.ReactiveFormsModule,
+                highcharts_angular_1.HighchartsChartModule
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]

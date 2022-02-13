@@ -9,7 +9,7 @@ export abstract class Vivienda {
   private _estado: {
     vendido: boolean;
     fecha: Date | null;
-    empleado: string;
+    empleado: number
   };
 
   constructor(
@@ -30,7 +30,7 @@ export abstract class Vivienda {
     estado: {
       vendido: boolean;
       fecha: Date | null;
-      empleado: string;
+      empleado: number;
     }
   ) {
     this._idVivienda = idVivienda;
@@ -71,7 +71,7 @@ export abstract class Vivienda {
   set caracteristicas(caracteristicas: Caracteristicas) {
     this._caracteristicas = caracteristicas;
   }
-  
+
   ubi() {
     return (
       'Municipio: ' +
@@ -84,7 +84,9 @@ export abstract class Vivienda {
   }
   est() {
     return (
-      'Vendido: ' + this._estado.vendido + ', Fecha: ' + this._estado.fecha
+      'Vendido: ' + this._estado.vendido +
+      ', Fecha: ' + this._estado.fecha +
+      ', Empleado: ' + this._estado.empleado
     );
   }
 

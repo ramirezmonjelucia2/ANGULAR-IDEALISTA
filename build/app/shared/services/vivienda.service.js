@@ -17,7 +17,7 @@ var ViviendaService = /** @class */ (function () {
         this.httpClient = httpClient;
     }
     ViviendaService.prototype.getViviendas = function () {
-        return this.httpClient.get("https://idealistav21.herokuapp.com/viviendas");
+        return this.httpClient.get("https://idealista-api.herokuapp.com/viviendas");
     };
     ViviendaService = __decorate([
         (0, core_1.Injectable)({
