@@ -12,6 +12,8 @@ var forms_1 = require("@angular/forms");
 var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/common/http");
 var app_routing_module_1 = require("./app-routing.module");
+var ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
+var highcharts_angular_1 = require("highcharts-angular");
 var app_component_1 = require("./app.component");
 var empleados_component_1 = require("./views/empleados/empleados.component");
 var about_me_component_1 = require("./views/about-me/about-me.component");
@@ -19,7 +21,6 @@ var dashboard_component_1 = require("./views/dashboard/dashboard.component");
 var info_viviendas_component_1 = require("./views/info-viviendas/info-viviendas.component");
 var crear_empleado_component_1 = require("./views/crear-empleado/crear-empleado.component");
 var editar_empleado_component_1 = require("./views/editar-empleado/editar-empleado.component");
-var highcharts_angular_1 = require("highcharts-angular");
 var chalets_component_1 = require("./views/chalets/chalets.component");
 var casas_component_1 = require("./views/casas/casas.component");
 var AppModule = /** @class */ (function () {
@@ -43,7 +44,8 @@ var AppModule = /** @class */ (function () {
                 app_routing_module_1.AppRoutingModule,
                 http_1.HttpClientModule,
                 forms_1.ReactiveFormsModule,
-                highcharts_angular_1.HighchartsChartModule
+                highcharts_angular_1.HighchartsChartModule,
+                ng_bootstrap_1.NgbModule
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]
