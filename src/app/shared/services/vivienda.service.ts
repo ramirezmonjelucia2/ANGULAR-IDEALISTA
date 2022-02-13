@@ -7,15 +7,20 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ViviendaService {
+  private url = "http://localhost:3000/viviendas"
 
   constructor(
     private httpClient: HttpClient
   ) { }
 
-
-  getViviendas(): Observable<Vivienda[]> {
-    return this.httpClient.get<Vivienda[]>("https://idealista-api.herokuapp.com/viviendas");
+  getVivi() {
+    return this.httpClient.get(this.url);
   }
-  
+  /*
+  getViviendas(): Observable<any> {
+    const url = `${this.url}/viviendas`;
+    return this.httpClient.get(url);
+  }
+*/
 
 }

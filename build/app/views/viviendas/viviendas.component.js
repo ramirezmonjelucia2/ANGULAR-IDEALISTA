@@ -11,20 +11,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ViviendasComponent = void 0;
 var core_1 = require("@angular/core");
+var casa_1 = require("src/app/shared/classes/casa");
 var vivienda_service_1 = require("src/app/shared/services/vivienda.service");
 var ViviendasComponent = /** @class */ (function () {
     function ViviendasComponent(viviendaService) {
         this.viviendaService = viviendaService;
     }
     ViviendasComponent.prototype.ngOnInit = function () {
-        this.getViviendas();
+        this.getVivi();
     };
-    ViviendasComponent.prototype.onSelect = function (vivienda) {
-        this.selectedVivienda = vivienda;
-    };
-    ViviendasComponent.prototype.getViviendas = function () {
+    ViviendasComponent.prototype.getVivi = function () {
         var _this = this;
-        this.viviendaService.getViviendas().subscribe(function (viviendas) { return _this.viviendas = viviendas; });
+        this.viviendaService.getVivi().subscribe(function (arrayEnt) {
+            _this.Oviviendas = arrayEnt.map(function (x) {
+                return new casa_1.Casa(x.idVivienda, x.largo, x.ancho, x.ubicacion, x.caracteristicas, x.estado, x.cochera);
+            });
+        });
     };
     ViviendasComponent = __decorate([
         (0, core_1.Component)({

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Vivienda } from 'src/app/shared/interfaces/interfaces';
+import { Casa } from 'src/app/shared/classes/casa';
+import { Vivienda } from 'src/app/shared/classes/vivienda';
 import { ViviendaService } from 'src/app/shared/services/vivienda.service';
 @Component({
   selector: 'app-viviendas',
@@ -7,18 +8,21 @@ import { ViviendaService } from 'src/app/shared/services/vivienda.service';
   styleUrls: ['./viviendas.component.css']
 })
 export class ViviendasComponent implements OnInit {
-  viviendas!: Vivienda[];
-  selectedVivienda!: Vivienda;
+  Oviviendas: Vivienda[];
   constructor(private viviendaService: ViviendaService) { }
 
   ngOnInit(): void {
-    this.getViviendas()
+    this.getVivi()
   }
-  public onSelect(vivienda: Vivienda) {
-    this.selectedVivienda = vivienda
-  }
-  public getViviendas(): void {
-    this.viviendaService.getViviendas().subscribe(viviendas => this.viviendas = viviendas)
+ 
+  
+  getVivi() {
+    this.viviendaService.getVivi().subscribe(
+      (arrayEnt: any) => {
+        this.Oviviendas = arrayEnt.map((x: any) => {
+          return new Casa(x.idVivienda, x.largo,x.ancho, x.ubicacion, x.caracteristicas, x.estado, x.cochera);
+        });
+    });
   }
 }
 

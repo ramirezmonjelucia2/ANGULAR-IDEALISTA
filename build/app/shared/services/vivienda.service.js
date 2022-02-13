@@ -15,9 +15,10 @@ var http_1 = require("@angular/common/http");
 var ViviendaService = /** @class */ (function () {
     function ViviendaService(httpClient) {
         this.httpClient = httpClient;
+        this.url = "http://localhost:3000/viviendas";
     }
-    ViviendaService.prototype.getViviendas = function () {
-        return this.httpClient.get("https://idealista-api.herokuapp.com/viviendas");
+    ViviendaService.prototype.getVivi = function () {
+        return this.httpClient.get(this.url);
     };
     ViviendaService = __decorate([
         (0, core_1.Injectable)({

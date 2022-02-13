@@ -123,6 +123,7 @@ export abstract class Vivienda {
     } else if (this.ubicacion.ciudad == 'huelva') {
       preciom2 = 1253 * this.superficie();
     }
+   
     return Math.round(preciom2);
   }
 
